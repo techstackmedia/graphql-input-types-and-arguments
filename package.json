@@ -2,9 +2,10 @@
   "name": "day4",
   "version": "1.0.0",
   "description": "",
+  "type": "module",
   "main": "demo.js",
   "scripts": {
-    "server": "nodemon demo.js"
+    "server": "DEBUG=app:log nodemon demo.js"
   },
   "keywords": [],
   "author": "",
@@ -12,6 +13,7 @@
   "dependencies": {
     "apollo-server": "^3.6.2",
     "debug": "^4.3.3",
+    "graphql": "^16.2.0",
     "graphql-tag": "^2.12.6"
   },
   "devDependencies": {

@@ -1,6 +1,6 @@
-const gql = require("graphql-tag");
-const { ApolloServer } = require("apollo-server");
-const debug = require("debug");
+import gql from "graphql-tag";
+import { ApolloServer } from "apollo-server";
+import debug from "debug";
 const log = debug("app:log");
 const port = 4000;
 
@@ -27,14 +27,14 @@ const typeDefs = gql`
   }
 
   type Query {
-    person: User
+    user: User
     shoe(input: ShoesInput): [Shoes]
   }
 `;
 
 const resolvers = {
   Query: {
-    person() {
+    user() {
       return {
         email: "techstackmedia@gmail.com",
         avatar: "http://techstackmedia.png",
